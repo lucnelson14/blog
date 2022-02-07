@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Teddy Koker</title>
+<meta name="generator" content="Jekyll v4.0.1" />
+<meta property="og:title" content="Teddy Koker" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="https://teddykoker.com/" />
+<meta property="og:url" content="https://teddykoker.com/" />
+<meta property="og:site_name" content="Teddy Koker" />
+<script type="application/ld+json">
+{"url":"https://teddykoker.com/","@type":"WebSite","headline":"Teddy Koker","name":"Teddy Koker","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css">
+  <link rel="stylesheet" href="/assets/trac.css"><link type="application/atom+xml" rel="alternate" href="https://teddykoker.com/feed.xml" title="Teddy Koker" /><script async src="https://www.googletagmanager.com/gtag/js?id=UA-138897125-1"></script>
+<script>
+  window['ga-disable-UA-138897125-1'] = window.doNotTrack === "1" || navigator.doNotTrack === "1" || navigator.doNotTrack === "yes" || navigator.msDoNotTrack === "1";
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){window.dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-138897125-1');
+</script>
+<link rel="shortcut icon" href="/favicon.png">
+
+  <!-- Katex Math (use defer to speed page load) -->
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
+        integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq"
+        crossorigin="anonymous">
+  <script defer
+          src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"
+          integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz"
+          crossorigin="anonymous"></script>
+  <script defer
+          src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"
+          integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI"
+          crossorigin="anonymous"
+          onload='renderMathInElement(document.body,{delimiters: [{left: "\\[",
+          right: "\\]", display: true}, {left: "$", right: "$", display: false}]})'></script>
+</head>
+</head>
+<body>
+<div class='content'><div class='nav'>
+    <ul class='wrap'>
+        <li><a href='/'>Home</a></li>
+        <li><a href='/about'>About</a></li>
+        <li><a href='/resume.pdf'>Résumé</a></li>
+        <li><a href='/feed.xml'>RSS</a></li>
+    </ul>
+</div>
+<div id='blog' class='wrap'>
+    <h1>Posts</h1>
+    <div id='posts' class='section'>
+        
+            <div class='post-row'>
+                <p class='post-title'>
+                    <a href="/2020/12/dataloader/">
+                        DataLoaders Explained: Building a Multi-Process Data Loader from Scratch
+                    </a>
+                </p>
+                <p class='post-date'>
+                    18 December 2020
+                </p>
+            </div>
+            <p class='post-subtitle'>
+                <p>When training a Deep Learning model, one must often read and pre-process data
+before it can be passed through the model. Depending on the data source and
+transformations needed, this step can amount to a non-negligable amount of time,
+which leads to unecessarily longer training times. This bottleneck is often
+remedied using a
+<a href="https://pytorch.org/docs/stable/data.html#torch.utils.data.DataLoader"><code class="highlighter-rouge">torch.utils.data.DataLoader</code></a>
+for PyTorch, or a
+<a href="https://www.tensorflow.org/api_docs/python/tf/data/Dataset"><code class="highlighter-rouge">tf.data.Dataset</code></a>
+for Tensorflow. These structures leverage parallel processing and pre-fetching
+in order reduce data loading time as much as possible. In this post we will
+build a simple version of PyTorch’s <code class="highlighter-rouge">DataLoader</code>, and show the benefits of
+parallel pre-processing.</p>
+
+            </p>
+            <span class='hidden'>1</span>
+        
+            <div class='post-row'>
+                <p class='post-title'>
+                    <a href="/2020/11/performers/">
+                        Performers: The Kernel Trick, Random Fourier Features, and Attention
+                    </a>
+                </p>
+                <p class='post-date'>
+                    11 November 2020
+                </p>
+            </div>
+            <p class='post-subtitle'>
+                <p>Google AI recently released a paper, <em>Rethinking Attention with Performers</em>
+<a class="citation" href="#choromanski2020rethinking">(Choromanski et al., 2020)</a>, which introduces <em>Performer</em>, a Transformer
+architecture which estimates the full-rank-attention mechanism using orthogonal
+random features to approximate the softmax kernel with linear space and time
+complexity. In this post we will investigate how this works, and how it is
+useful for the machine learning community.</p>
+
+            </p>
+            <span class='hidden'>2</span>
+        
+            <div class='post-row'>
+                <p class='post-title'>
+                    <a href="/2020/05/deep-learning-for-guitar-effect-emulation/">
+                        Deep Learning for Guitar Effect Emulation
+                    </a>
+                </p>
+                <p class='post-date'>
+                    10 May 2020
+                </p>
+            </div>
+            <p class='post-subtitle'>
+                <p>Since the 1940s, electric guitarists, keyboardists, and other instrumentalists
+have been using <a href="https://en.wikipedia.org/wiki/Effects_unit">effects pedals</a>,
+devices that modify the sound of the original audio source. Typical effects
+include distortion, compression, chorus, reverb, and delay. Early effects pedals
+consisted of basic analog circuits, often along with vacuum tubes, which were
+later replaced with transistors. Although many pedals today apply effects
+digitally with modern signal processing techniques, many purists argue that the
+sound of analog pedals can not be replaced by their digital counterparts. We’ll
+follow a deep learning approach to see if we can use machine learning to
+replicate the sound of an iconic analog effect pedal, the <a href="https://en.wikipedia.org/wiki/Ibanez_Tube_Screamer">Ibanez Tube
+Screamer</a>. This post will be
+mostly a reproduction of the work done by Alec Wright et al. in <em>Real-Time
+Guitar Amplifier Emulation with Deep Learning</em> <a class="citation" href="#wright2020real">(Wright et al., 2020)</a>.</p>
+
+            </p>
+            <span class='hidden'>3</span>
+        
+            <div class='post-row'>
+                <p class='post-title'>
+                    <a href="/2020/02/nlp-from-scratch-annotated-attention/">
+                        NLP from Scratch: Annotated Attention
+                    </a>
+                </p>
+                <p class='post-date'>
+                    25 February 2020
+                </p>
+            </div>
+            <p class='post-subtitle'>
+                <p>This post is the first in a series of articles about <a href="https://en.wikipedia.org/wiki/Natural_language_processing">natural language processing</a> (NLP), a subfield of machine learning concerning the interaction between computers and human language. This article will be focused on <em>attention</em>, a mechanism that forms the backbone of many state-of-the art language models, including Google’s BERT (<a href="https://arxiv.org/abs/1810.04805">Devlin et al., 2018</a>), and OpenAI’s GPT-2 (<a href="https://openai.com/blog/better-language-models/">Radford et al., 2019</a>).</p>
+
+            </p>
+            <span class='hidden'>4</span>
+        
+            <div class='post-row'>
+                <p class='post-title'>
+                    <a href="/2019/12/beating-the-odds-machine-learning-for-horse-racing/">
+                        Beating the Odds: Machine Learning for Horse Racing
+                    </a>
+                </p>
+                <p class='post-date'>
+                    01 December 2019
+                </p>
+            </div>
+            <p class='post-subtitle'>
+                <p>Inspired by the story of <a href="https://en.wikipedia.org/wiki/Bill_Benter">Bill
+Benter</a>, a gambler who
+developed a computer model that made him close to a billion dollars <a class="citation" href="#gambler">(Chellel, 2018)</a>
+betting on horse races in the Hong Kong Jockey Club (HKJC), I set out to
+see if I could use machine learning to identify inefficiencies in horse
+racing wagering. <!--more--></p>
+
+            </p>
+            <span class='hidden'>5</span>
+        
+            <div class='post-row'>
+                <p class='post-title'>
+                    <a href="/2019/08/histopathologic-cancer-detection-with-transfer-learning/">
+                        Histopathologic Cancer Detection with Transfer Learning
+                    </a>
+                </p>
+                <p class='post-date'>
+                    12 August 2019
+                </p>
+            </div>
+            <p class='post-subtitle'>
+                <p>In this post we will be using a method known as <em>transfer learning</em> in order to detect metastatic cancer in patches of images from digital pathology scans.</p>
+
+            </p>
+            <span class='hidden'>6</span>
+        
+            <div class='post-row'>
+                <p class='post-title'>
+                    <a href="/2019/07/predicting-academic-collaboration-with-logistic-regression/">
+                        Predicting Academic Collaboration with Logistic Regression
+                    </a>
+                </p>
+                <p class='post-date'>
+                    01 July 2019
+                </p>
+            </div>
+            <p class='post-subtitle'>
+                <p>In my <a href="/2019/06/multi-class-classification-with-logistic-regression-in-python/">last post</a>, we learned what Logistic Regression is, and how it can be used to classify flowers in the Iris Dataset. In this post we will see how Logistic Regression can be applied to social networks in order to predict future collaboration between researchers. As usual we’ll start by importing a few libraries:</p>
+
+            </p>
+            <span class='hidden'>7</span>
+        
+            <div class='post-row'>
+                <p class='post-title'>
+                    <a href="/2019/06/multi-class-classification-with-logistic-regression-in-python/">
+                        Multi-Class Classification with Logistic Regression in Python
+                    </a>
+                </p>
+                <p class='post-date'>
+                    16 June 2019
+                </p>
+            </div>
+            <p class='post-subtitle'>
+                <p>A few posts back I wrote about a common parameter optimization method known as <a href="/2019/05/trading-with-reinforcement-learning-in-python-part-i-gradient-ascent/">Gradient Ascent</a>. In this post we will see how a similar method can be used to create a model that can classify data. This time, instead of using gradient <em>ascent</em> to maximize a reward function, we will use gradient <em>descent</em> to minimize a cost function. Let’s start by importing all the libraries we need:</p>
+
+            </p>
+            <span class='hidden'>8</span>
+        
+            <div class='post-row'>
+                <p class='post-title'>
+                    <a href="/2019/06/trading-with-reinforcement-learning-in-python-part-ii-application/">
+                        Trading with Reinforcement Learning in Python Part II: Application
+                    </a>
+                </p>
+                <p class='post-date'>
+                    04 June 2019
+                </p>
+            </div>
+            <p class='post-subtitle'>
+                <p>In my <a href="/2019/05/trading-with-reinforcement-learning-in-python-part-i-gradient-ascent/">last post</a> we learned what gradient ascent is, and how we can use it to maximize a reward function. This time, instead of using mean squared error as our reward function, we will use the Sharpe Ratio. We can use reinforcement learning to maximize the Sharpe ratio over a set of training data, and attempt to create a strategy with a high Sharpe ratio when tested on out-of-sample data.</p>
+
+            </p>
+            <span class='hidden'>9</span>
+        
+            <div class='post-row'>
+                <p class='post-title'>
+                    <a href="/2019/05/trading-with-reinforcement-learning-in-python-part-i-gradient-ascent/">
+                        Trading with Reinforcement Learning in Python Part I: Gradient Ascent
+                    </a>
+                </p>
+                <p class='post-date'>
+                    28 May 2019
+                </p>
+            </div>
+            <p class='post-subtitle'>
+                <p>In the next few posts, I will be going over a strategy that uses Machine Learning to determine what trades to execute. Before we start going over the strategy, we will go over one of the algorithms it uses: Gradient Ascent.</p>
+
+            </p>
+            <span class='hidden'>10</span>
+        
+            <div class='post-row'>
+                <p class='post-title'>
+                    <a href="/2019/05/momentum-strategy-from-stocks-on-the-move-in-python/">
+                        Momentum Strategy from "Stocks on the Move" in Python
+                    </a>
+                </p>
+                <p class='post-date'>
+                    19 May 2019
+                </p>
+            </div>
+            <p class='post-subtitle'>
+                <p>In this post we will look at the momentum strategy from Andreas F. Clenow’s book <a href="https://amzn.to/2YzEIvL">Stocks on the Move: Beating the Market with Hedge Fund Momentum Strategy</a> and backtest its performance using the survivorship bias-free dataset we created in my <a href="/2019/05/creating-a-survivorship-bias-free-sp-500-dataset-with-python/">last post</a>.</p>
+
+            </p>
+            <span class='hidden'>11</span>
+        
+            <div class='post-row'>
+                <p class='post-title'>
+                    <a href="/2019/05/creating-a-survivorship-bias-free-sp-500-dataset-with-python/">
+                        Creating a Survivorship Bias-Free S&P 500 Dataset with Python
+                    </a>
+                </p>
+                <p class='post-date'>
+                    12 May 2019
+                </p>
+            </div>
+            <p class='post-subtitle'>
+                <p>When developing a stock trading strategy, it is important that the backtest be as accurate as possible. In some of my previous strategies, I have noted that the backtest did not account for survivorship bias. <a href="https://en.wikipedia.org/wiki/Survivorship_bias">Survivorship bias</a> is a form of selection bias caused by only focusing on assets that have already passed some sort of selection process.</p>
+
+            </p>
+            <span class='hidden'>12</span>
+        
+            <div class='post-row'>
+                <p class='post-title'>
+                    <a href="/2019/05/improving-cross-sectional-mean-reversion-strategy-in-python/">
+                        Improving Cross Sectional Mean Reversion Strategy in Python
+                    </a>
+                </p>
+                <p class='post-date'>
+                    05 May 2019
+                </p>
+            </div>
+            <p class='post-subtitle'>
+                <p>In my <a href="/2019/04/backtesting-a-cross-sectional-mean-reversion-strategy-in-python/">last post</a> we implemented a cross-sectional mean reversion strategy from Ernest Chan’s <a href="https://amzn.to/2VptDjd">Algorithmic Trading: Winning Strategies and Their Rationale</a>. In this post we will look at a few improvements we can make to the strategy so we can start live trading!</p>
+
+            </p>
+            <span class='hidden'>13</span>
+        
+            <div class='post-row'>
+                <p class='post-title'>
+                    <a href="/2019/04/backtesting-a-cross-sectional-mean-reversion-strategy-in-python/">
+                        Backtesting a Cross-Sectional Mean Reversion Strategy in Python
+                    </a>
+                </p>
+                <p class='post-date'>
+                    28 April 2019
+                </p>
+            </div>
+            <p class='post-subtitle'>
+                <p>In this post we will look at a cross-sectional mean reversion strategy from Ernest Chan’s book <a href="https://amzn.to/2VptDjd">Algorithmic Trading: Winning Strategies and Their Rationale</a> and backtest its performance using <a href="https://www.backtrader.com/">Backtrader</a>.</p>
+
+            </p>
+            <span class='hidden'>14</span>
+        
+            <div class='post-row'>
+                <p class='post-title'>
+                    <a href="/2019/04/backtesting-portfolios-of-leveraged-etfs-in-python-with-backtrader/">
+                        Backtesting Portfolios of Leveraged ETFs in Python with Backtrader
+                    </a>
+                </p>
+                <p class='post-date'>
+                    25 April 2019
+                </p>
+            </div>
+            <p class='post-subtitle'>
+                <p>In my <a href="/2019/04/simulating-historical-performance-of-leveraged-etfs-in-python/">last post</a> we discussed simulation of the 3x leveraged S&amp;P 500 ETF, UPRO, and demonstrated why a 100% long UPRO portfolio may not be the best idea. In this post we will analyze the simulated historical performance of another 3x leveraged ETF, TMF, and explore a leveraged variation of Jack Bogle’s 60 / 40 equity/bond allocation.</p>
+
+            </p>
+            <span class='hidden'>15</span>
+        
+            <div class='post-row'>
+                <p class='post-title'>
+                    <a href="/2019/04/simulating-historical-performance-of-leveraged-etfs-in-python/">
+                        Simulating Historical Performance of Leveraged ETFs in Python
+                    </a>
+                </p>
+                <p class='post-date'>
+                    21 April 2019
+                </p>
+            </div>
+            <p class='post-subtitle'>
+                <p>In this post we will look at the long term performance of leveraged ETFs, as well as simulate how they may have performed in time periods before their inception.</p>
+
+            </p>
+            <span class='hidden'>16</span>
+        
+    </div>
+</div>
+
+</div>
+</body>
+</html>
